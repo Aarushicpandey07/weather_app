@@ -1,13 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+*{
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family:'Outfit' , 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p{
+  font-size:1.6rem;
+}
+h1{
+  font-size: 6rem;
+}
+
+/* Add this to your CSS file */
+.transition-background {
+  transition: background-image 0.1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+.App{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color:grey;
+  color:black;
+  background: url('https://img.freepik.com/premium-photo/panorama-clouds-from-airplane-window-generative-ai_141130-7450.jpg') no-repeat center center/cover;
+}
+.App::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.App .search{
+  text-align:center;
+  padding:1 rem;
+  padding-top: 10px;
+
+}
+.App input{
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius:25px;
+  border: 1 px solid black;
+  background: grey;
+  color:azure;
+
+}
+::placeholder{
+  color:aliceblue;
+}
+
+.container {
+  max-width: 700px;
+  height:700px;
+  margin: auto;
+  padding: 0 1rem;;
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.App .top{
+  width:100%;
+  margin:1rem auto;
+}
+.App .Description{
+  position:relative;
+  right:-90%;
+  transform-origin:0 0;
+  transform: rotate(270deg);
+}
+
+.App .bottom{
+  display: flex;
+  justify-content:space-evenly;
+  width:100%;
+  margin:1rem auto;
+  padding: 1 rem;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.2);
+} 
+.bold{
+  font-weight:700;
 }
